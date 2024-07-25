@@ -6,7 +6,8 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y gcc
 
 # Install required packages: scanpy, scipy, anndata, pandas, numpy
-RUN pip install scanpy scipy anndata pandas numpy loompy scvelo matplotlib leidenalg scikit-image scrublet
+RUN pip install scanpy scipy anndata pandas numpy loompy scvelo matplotlib leidenalg scikit-image
+RUN pip install scrublet
 
 # Copy your application code to the container
 COPY . /app
