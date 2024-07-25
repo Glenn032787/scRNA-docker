@@ -4,7 +4,7 @@ FROM python:3.8-slim
 WORKDIR /app
 
 # Install required packages: scanpy, scipy, anndata, pandas, numpy
-RUN pip install scanpy scipy anndata pandas numpy loompy scvelo matplotlib leidenalg
+RUN pip install scanpy scipy anndata pandas numpy loompy scvelo matplotlib leidenalg scikit-image scrublet
 
 # Copy your application code to the container
 COPY . /app
