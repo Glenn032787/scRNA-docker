@@ -11,6 +11,8 @@ WORKDIR /app
      dnf -y install gcc-c++ && \
      dnf -y install mesa-libGL mesa-libGLU
 
+RUN apt-get update && apt-get install -y build-essential
+
 # Install required packages: scanpy, scipy, anndata, pandas, numpy
 RUN pip install scanpy scipy anndata pandas numpy loompy scvelo matplotlib leidenalg scikit-image
 RUN pip install scrublet
