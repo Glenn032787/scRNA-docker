@@ -3,6 +3,8 @@ FROM python:3.8-slim
 # Set the working directory in the container
 WORKDIR /app
 
+RUN apt-get update && apt-get install -y gcc
+
 # Install required packages: scanpy, scipy, anndata, pandas, numpy
 RUN pip install scanpy scipy anndata pandas numpy loompy scvelo matplotlib leidenalg scikit-image scrublet
 
